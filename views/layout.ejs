@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=typeof title == 'undefined' ? 'New Sails App' : title%>
+    </title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- beautifier library -->
+    <link rel="stylesheet" href="/bower_components/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/toastr/toastr.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- map -->
+    <link rel="stylesheet" href="/bower_components/leaflet/leaflet.css"/>
+
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+
+    <!-- bootstrap-select -->
+    <link rel="stylesheet" href="/bower_components/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!--STYLES END-->
+</head>
+
+<body>
+    <%- body %>
+    
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/toastr/toastr.min.js"></script>
+
+    <!-- map -->
+    <script src="/bower_components/leaflet/leaflet.js"></script>
+
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- bootstrap-select -->
+    <script src="/bower_components/bootstrap-select-1.12.4/dist/js/bootstrap-select.js"></script>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/main.js"></script>
+    <!--SCRIPTS END-->
+</body>
+
+</html>

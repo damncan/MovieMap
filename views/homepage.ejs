@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="datetimepicker1">時間</label>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="selectorMovie">片名</label>
+                <select id="selectorMovie" class="selectpicker" multiple data-live-search="true">
+                    <optgroup label="全選">
+                        <% movies.forEach(function(movie){ %>
+                            <option value=<%=movie.id%> data-subtext="<span class='fa fa-star'> <%=movie.imdb%></span>"> <%=movie.movieName%></option>
+                        <% }); %>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="selectorCinema">影城</label>
+                <select id="selectorCinema" class="selectpicker" multiple data-live-search="true">
+                    <% cinemagroups.forEach(function(cinemagroup){ %>
+                        <optgroup label=<%=cinemagroup.cinemaGroupName%>>
+                            <% cinemagroup.cinemas.forEach(function(cinema){ %>
+                                <option value=<%=cinema.id%>><%=cinema.cinemaName%></option>
+                            <% }); %>
+                        </optgroup>
+                    <% }); %>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="selectorCinema"></label>
+                <button id="search" type="button" class="btn btn-primary btn-full">搜尋</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">地圖</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseShowtime">
+                        <h4 class="panel-title">
+                            <span class="glyphicon glyphicon-film"></span>
+                            時刻表
+                        </h4>
+                    </div>
+                    <div id="collapseShowtime" class="panel-collapse collapse">
+                        <select id="selectorMovieInShowtime" class="selectpicker" multiple data-live-search="true" data-max-options="1"></select>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseDiscount">
+                        <h4 class="panel-title">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            信用卡優惠
+                        </h4>
+                    </div>
+                    <div id="collapseDiscount" class="panel-collapse collapse">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
