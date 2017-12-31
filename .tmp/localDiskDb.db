@@ -6962,26 +6962,6 @@
     ]
   },
   "schema": {
-    "articles": {
-      "title": {
-        "type": "string"
-      },
-      "body": {
-        "type": "string"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
     "cinema": {
       "cinemaName": {
         "type": "string"
@@ -7122,7 +7102,6 @@
     },
     "cinemagroup": {
       "id": 15
-    },
-    "articles": {}
+    }
   }
 }
